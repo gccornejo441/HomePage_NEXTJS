@@ -6,6 +6,7 @@ import {
   MenuIcon,
 } from "@heroicons/react/solid";
 import React, { useState, useEffect, useRef } from "react";
+import Dropdown from './dropdown';
 
 const links = [
   { href: "/", label: "Press" },
@@ -60,21 +61,22 @@ const Nav = () => {
       {/* FULL WINDOW DISPLAYED - NON-SCROLL */}
       
       <div class="hidden md:flex justify-center">
-        <div class="xl:container text-green-900 font-bold w-full uppercase text-xs py-7 flex">
+        <div class="xl:container text-green-900 font-bold w-full text-xs flex">
           <span class="flex items-center ml-10 w-1/2">
             <FingerPrintIcon className="w-12 h-12 text-gray-900" />
           </span>
-          <ul class="flex flex-row-reverse w-1/2">
-            <li class="flex items-center">
-              <a href="/" class="p-4">
+          <ul class="flex flex-row-reverse items-end w-1/2 h-24 mr-3">
+          <div>
+         <span class="pt-2 text-red-900 font-thin uppercase">Free shiping in north america on orders</span>
+          <div class="flex flex-row-reverse">
+              <span class="p-4 flex items-end">
+                <ShoppingBagIcon className="w-5 h-5 text-gray-900 mx-5" />
+                <Dropdown/>
+                <div class="h-6 w-6 rounded-xl bg-red-200 text-gray-900 font-semibold flex justify-center items-center mr-4">0</div>
                 <SearchIcon className="w-4 h-4 text-gray-900" />
-              </a>
-            </li>
-            <li class="flex items-center">
-              <a href="/" class="p-4">
-                <ShoppingBagIcon className="w-4 h-4 text-gray-900" />
-              </a>
-            </li>
+              </span>
+          </div>
+        </div>
           </ul>
         </div>
       </div>
@@ -103,7 +105,7 @@ const Nav = () => {
             </ul>
           </ul>
         </div>
-          <div ref={IconsRef}  class="text-gray-50 px-5">
+          <div ref={IconsRef}  class="text-gray-50">
             <ul class="flex justify-around">
               <li class="flex items-center">
                 <a href="/" class="border-l border-gray-50 p-4">
