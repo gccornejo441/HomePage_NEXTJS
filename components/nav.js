@@ -5,8 +5,7 @@ import {
   FingerPrintIcon,
   MenuIcon,
 } from "@heroicons/react/solid";
-import React, { useState, useEffect, useRef } from 'react';
-
+import React, { useState, useEffect, useRef } from "react";
 
 const links = [
   { href: "/", label: "Press" },
@@ -22,29 +21,30 @@ const Nav = () => {
 
   const logit = () => {
     setScrollTop(window.pageYOffset);
-  }
+  };
 
+  // REFs
   const scrollRef = useRef();
   const bannerRef = useRef();
+  const IconsRef = useRef();
 
   useEffect(() => {
     const watchScroll = () => {
-      window.addEventListener('scroll', logit);
-    }
+      window.addEventListener("scroll", logit);
+    };
 
-    if ( scrollY > 50) {
-      scrollRef.current.style.position = 'fixed';
+    if (scrollY > 50) {
+      scrollRef.current.style.position = "fixed";
       scrollRef.current.style.top = 0;
-      // scrollRef.current.style.display = 'none'
-      bannerRef.current.style.display = 'flex';
+      bannerRef.current.style.display = "flex";
+      IconsRef.current.style.display = "flex";
     } else {
-      scrollRef.current.style.position = 'relative';
-
-      bannerRef.current.style.display = 'none';
-      
+      bannerRef.current.style.display = "none";
+      scrollRef.current.style.position = "relative";
+      IconsRef.current.style.display = "none";
     }
-    return watchScroll();   
-  })
+    return watchScroll();
+  });
 
   return (
     <>
@@ -57,60 +57,66 @@ const Nav = () => {
         </div>
       </div>
 
-      {/* FULL WINDOW DISPLAYED NON-SCROLL */}
-      <div class="hidden md:block">
-        <div class="text-green-900 font-bold w-full uppercase text-xs py-4 flex">
+      {/* FULL WINDOW DISPLAYED - NON-SCROLL */}
+      
+      <div class="hidden md:flex justify-center">
+        <div class="xl:container text-green-900 font-bold w-full uppercase text-xs py-7 flex">
           <span class="flex items-center ml-10 w-1/2">
             <FingerPrintIcon className="w-12 h-12 text-gray-900" />
           </span>
-        <ul class="flex flex-row-reverse w-1/2">
-          <li class="flex items-center">
-            <a href="/" class="p-4">
-              <SearchIcon className="w-4 h-4 text-gray-900" />
-            </a>
-          </li>
-          <li class="flex items-center">
-            <a href="/" class="p-4">
-              <ShoppingBagIcon className="w-4 h-4 text-gray-900" />
-            </a>
-          </li>
-        </ul>
+          <ul class="flex flex-row-reverse w-1/2">
+            <li class="flex items-center">
+              <a href="/" class="p-4">
+                <SearchIcon className="w-4 h-4 text-gray-900" />
+              </a>
+            </li>
+            <li class="flex items-center">
+              <a href="/" class="p-4">
+                <ShoppingBagIcon className="w-4 h-4 text-gray-900" />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      {/* FULL WINDOW DISPLAYED NON-SCROLL */}
+      {/* FULL WINDOW DISPLAYED - SCROLL */}
+
       <nav ref={scrollRef} class="bg-gray-900 md:flex justify-between hidden w-full">
-        <span ref={bannerRef} class="flex items-center ml-10">
-          <FingerPrintIcon className="w-10 h-10 text-gray-50" />
-        </span>
-        <ul class="flex container">
-          <li class="text-gray-50 py-3 px-5">
-            <Link href="/">
-              <a class="uppercase text-sm">Lookbook</a>
-            </Link>
-          </li>
-          <ul class="flex">
-            {links.map(({ key, href, label }) => (
-              <li class="text-gray-50 py-3 px-5" key={key}>
-                <Link href={href}>
-                  <a class="uppercase text-sm">{label}</a>
-                </Link>
-              </li>
-            ))}
+            <span ref={bannerRef} class="flex items-center">
+              <FingerPrintIcon className="w-10 h-10 text-gray-50 ml-12" />
+            </span>
+        <div class="container xl:mx-auto ml-5">
+          <ul class="flex justify-between">
+            <ul class="flex">
+            <li class="text-gray-50 py-3 px-5">
+              <Link href="/">
+                <a class="uppercase text-sm">Lookbook</a>
+              </Link>
+            </li>
+              {links.map(({ key, href, label }) => (
+                <li class="text-gray-50 py-3 px-5" key={key}>
+                  <Link href={href}>
+                    <a class="uppercase text-sm">{label}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </ul>
-        </ul>
-        <ul class="flex justify-around">
-          <li class="flex items-center">
-            <a href="/" class="border-l border-gray-50 p-4">
-              <SearchIcon className="w-4 h-4 text-gray-50" />
-            </a>
-          </li>
-          <li class="flex items-center">
-            <a href="/" class="border-l border-gray-50 p-4">
-              <ShoppingBagIcon className="w-4 h-4 text-gray-50" />
-            </a>
-          </li>
-        </ul>
+        </div>
+          <div ref={IconsRef}  class="text-gray-50 px-5">
+            <ul class="flex justify-around">
+              <li class="flex items-center">
+                <a href="/" class="border-l border-gray-50 p-4">
+                  <SearchIcon className="w-4 h-4 text-gray-50" />
+                </a>
+              </li>
+              <li class="flex items-center">
+                <a href="/" class="border-l border-gray-50 p-4">
+                  <ShoppingBagIcon className="w-4 h-4 text-gray-50" />
+                </a>
+              </li>
+            </ul>
+          </div>
       </nav>
 
       <nav class="bg-gray-900 md:hidden">
@@ -132,7 +138,7 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
-      <div  class="bg-gray-50 text-center md:hidden">
+      <div class="bg-gray-50 text-center md:hidden">
         <span class="flex items-center justify-center">
           <FingerPrintIcon className="w-10 h-10 text-gray-900" />
         </span>
