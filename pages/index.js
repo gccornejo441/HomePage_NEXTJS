@@ -10,29 +10,14 @@ export default () => {
   <Head/>
     <Nav />
     <h1 class="text-2xl"></h1>
-    <div class="bg-gray-500 text-center flex justify-center h-full">
-        <Image src="/static/smokey-wood.jpg" height="750" width="1700"/>
+    <div class=" text-center flex justify-center h-full">
+        <img class="relative z-0 top-50" src="/static/smokey-wood.jpg" height="800" width="1900"/>
       </div>
-
-      <div class="bg-yellow-100 text-center flex justify-center h-96 my-12">
-        <div class="text-gray-900 font-thin w-1/3 uppercase text-xs py-4 h-96">
-          Welcome to biko. Our Jewels are proudly mad in canada, with love.{" "}
-          <span>
-            <a>| shop now</a>
-          </span>
+        <div class="text-center flex justify-evenly">
+          <div class="uppercase font-bold text-2xl my-5">New Arrivals</div>
         </div>
-      </div>
-      <div class="bg-yellow-100 text-center flex justify-center h-96 my-12">
-        <div class="text-gray-900 font-thin w-1/3 uppercase text-xs py-4 h-96">
-          Welcome to biko. Our Jewels are proudly mad in canada, with love.{" "}
-          <span>
-            <a>| shop now</a>
-          </span>
-        </div>
-      </div>
-
-      <div class="bg-yellow-100 text-center flex justify-center h-96 my-12">
-        <div class="text-gray-900 font-thin w-1/3 uppercase text-xs py-4 h-96">
+      <div class="bg-yellow-100 text-center flex justify-center h-96 my-12 relative">
+        <div class="text-gray-800 font-thin w-1/3 uppercase text-xs py-4 h-96">
           Welcome to biko. Our Jewels are proudly mad in canada, with love.{" "}
           <span>
             <a>| shop now</a>
@@ -40,23 +25,7 @@ export default () => {
         </div>
       </div>
 
-      <div class="bg-yellow-100 text-center flex justify-center h-96 my-12">
-        <div class="text-gray-900 font-thin w-1/3 uppercase text-xs py-4 h-96">
-          Welcome to biko. Our Jewels are proudly mad in canada, with love.{" "}
-          <span>
-            <a>| shop now</a>
-          </span>
-        </div>
-      </div>
 
-      <div class="bg-yellow-100 text-center flex justify-center h-96 my-12">
-        <div class="text-gray-900 font-thin w-1/3 uppercase text-xs py-4 h-96">
-          Welcome to biko. Our Jewels are proudly mad in canada, with love.{" "}
-          <span>
-            <a>| shop now</a>
-          </span>
-        </div>
-      </div>
   </>
   )
 };

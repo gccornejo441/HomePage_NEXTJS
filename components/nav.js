@@ -60,7 +60,7 @@ const Nav = () => {
 
       {/* FULL WINDOW DISPLAYED - NON-SCROLL */}
       
-      <div class="hidden md:flex justify-center">
+      <div class="hidden md:flex justify-center relative z-10 bg-gray-50">
         <div class="xl:container text-green-900 font-bold w-full text-xs flex">
           <span class="flex items-center ml-10 w-1/2">
             <FingerPrintIcon className="w-12 h-12 text-gray-900" />
@@ -83,8 +83,8 @@ const Nav = () => {
 
       {/* FULL WINDOW DISPLAYED - SCROLL */}
 
-      <nav ref={scrollRef} class="bg-gray-900 md:flex justify-between hidden w-full">
-            <span ref={bannerRef} class="flex items-center">
+      <nav ref={scrollRef} class="bg-gray-900 md:flex justify-between hidden w-full z-20">
+            <span ref={bannerRef} class="flex items-center z-20">
               <FingerPrintIcon className="w-10 h-10 text-gray-50 ml-12" />
             </span>
         <div class="container xl:mx-auto ml-5">
