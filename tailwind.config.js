@@ -18,6 +18,10 @@ module.exports = {
       green: colors.green,
       emerald: colors.emerald,
       teal: colors.teal
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
     }
   },
   variants: {

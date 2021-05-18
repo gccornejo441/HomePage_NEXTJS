@@ -64,6 +64,7 @@ const Nav = () => {
         <div class="xl:container text-green-900 font-bold w-full text-xs flex">
           <span class="flex items-center ml-10 w-1/2">
             <FingerPrintIcon className="w-12 h-12 text-gray-900" />
+            <div class="uppercase text-red-900 text-3xl font-serif ml-5"><span>Stile</span></div>
           </span>
           <ul class="flex flex-row-reverse items-end w-1/2 h-24 mr-3">
           <div>

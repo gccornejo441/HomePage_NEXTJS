@@ -1,0 +1,77 @@
+{
+  "product_list_one" : [
+        {
+          "id": "1",
+          "title": "Black Coffee",
+          "description": "Black Coffee",
+          "image": "/images/coco1.jpg",
+          "price": 9.00,
+          "quantity": 1,
+          "selected": false
+        },
+        {
+          "id": "2",
+          "title": "Latte",
+          "description": "Light Espresso",
+          "image": "/images/cream1.jpg",
+          "price": 12.00,
+          "quantity": 1,
+          "selected": false
+        }
+      ],
+      "product_list_two" : [
+        {
+            "id": "3",
+            "title": "Espresso",
+            "description": "A Nice Cup of Joe",
+            "image": "/images/gray1.jpg",
+            "price": 90.00,
+            "quantity": 1
+          },
+          {
+            "id": "4",
+            "title": "Coffee Vienna",
+            "description": "A Nice Cup of Joe",
+            "image": "/images/hood1.jpg",
+            "price": 90.00,
+            "quantity": 1
+          }
+      ],
+      "product_list_three" : [
+        {
+            "id": "5",
+            "title": "Espresso",
+            "description": "A Nice Cup of Joe",
+            "image": "/images/dark2.jpg",
+            "price": 90.00,
+            "quantity": 1
+          },
+          {
+            "id": "6",
+            "title": "Coffee Vienna",
+            "description": "A Nice Cup of Joe",
+            "image": "/images/gray2.jpg",
+            "price": 90.00,
+            "quantity": 1
+          }
+      ],
+      "product_list_four" : [
+        {
+            "id": "7",
+            "title": "Espresso",
+            "description": "A Nice Cup of Joe",
+            "image": "/images/cyan1.jpg",
+            "price": 90.00,
+            "quantity": 1
+          },
+          {
+            "id": "8",
+            "title": "Coffee Vienna",
+            "description": "A Nice Cup of Joe",
+            "image": "/images/navy2.jpg",
+            "price": 90.00,
+            "quantity": 1
+          }
+      ]
+    
+}
